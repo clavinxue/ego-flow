@@ -1,0 +1,12 @@
+{
+  "name": "ego-flow",
+  "displayName": "Google Flow (Ego Lite)",
+  "version": "0.1.0",
+  "description": "Token-efficient Google Flow (flow.google.com) automation powered by Ego Lite (ego-browser): direct local reference uploads, batched DOM scripts, Nano Banana image generation, Omni/Veo video shots, and credit-safe checkpoints.",
+  "logo": "assets/logo.svg",
+  "suggestedPrompts": [
+    "用 ego-flow 在 Google Flow 上传参考图并用 Nano Banana 2.1 生成 4:3 海报",
+    "用 ego-flow 在 Google Flow 规划并生成一段 3 镜头的社区走读短片",
+    "打开 Google Flow 检查当前点数并新建项目"
+  ]
+}
