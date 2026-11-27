@@ -1,0 +1,34 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "ego-flow-gpt",
+  "version": "0.1.0",
+  "description": "Use local Ego Lite to operate Google Flow from ChatGPT Work or Codex: reference uploads, image and video generation, credit checkpoints and verified downloads.",
+  "author": {
+    "name": "clavinxue",
+    "url": "https://github.com/clavinxue"
+  },
+  "homepage": "https://github.com/clavinxue/ego-flow/tree/main/plugins/ego-flow-gpt",
+  "repository": "https://github.com/clavinxue/ego-flow",
+  "keywords": ["google-flow", "ego-lite", "video", "image", "chatgpt-work"],
+  "extensions": {
+    "com.openai": {
+      "requires_local_executor": true,
+      "onboardingSkill": "./skills/ego-flow-setup/SKILL.md",
+      "interface": {
+        "displayName": "EGO Flow for GPT",
+        "shortDescription": "用 EGO 在 Flow 生成图片与视频",
+        "longDescription": "为 ChatGPT 桌面本地 Work 和 Codex 提供 Google Flow 操作流程。支持参考图、分镜、首尾帧、点数确认、人工接管和下载。需要本机安装 EGO Lite，并有获准执行本地命令的能力；插件不包含或自动安装浏览器，不适用于没有本机执行连接的云端对话。",
+        "developerName": "clavinxue",
+        "category": "Productivity",
+        "capabilities": ["Google Flow 图片生成", "分镜与视频生成", "本地参考图上传与下载"],
+        "defaultPrompt": [
+          "检查 EGO 和 Google Flow 的连接，不生成、不消耗点数。",
+          "用本地参考图在 Google Flow 准备视频，先让我确认模型、参数和实际点数。",
+          "按我的分镜用 Google Flow 生成视频，并把成品下载到我指定的文件夹。"
+        ],
+        "composerIcon": "./assets/logo.svg",
+        "logo": "./assets/logo.svg"
+      }
+    }
+  }
+}

@@ -2,6 +2,19 @@
 
 使用 **Ego Lite (`ego-browser` CLI)** 高效、省 Token 地操作 Google Flow (`https://flow.google.com/`) 的插件。
 
+## 两个宿主版本
+
+| 版本 | 位置 | 适用环境 |
+| --- | --- | --- |
+| 原版 | 本仓库根目录 | Antigravity + 本地 EGO Lite |
+| GPT / Work 版 | [`plugins/ego-flow-gpt/`](plugins/ego-flow-gpt/) | ChatGPT 桌面本地 Work / Codex + 本地 EGO Lite |
+
+GPT 版保留上传、分镜、点数确认和下载能力，增加本地执行检查、标准插件声明与生成超时防重复提交。它是桌面专用插件，不向纯云端对话提供本地浏览器连接。安装、迁移和验证范围见 [GPT 版说明](plugins/ego-flow-gpt/README.md)。
+
+**打包提示**：仓库现在包含两个插件根目录。导入 GPT 插件时请使用发布的 `ego-flow-gpt` 单插件 ZIP，不要导入整个仓库 ZIP。
+
+[下载 GPT 版安装包（v0.1.0）](https://github.com/clavinxue/ego-flow/raw/refs/heads/main/dist/ego-flow-gpt-0.1.0.zip)。如需重新构建，使用 Python 3.9+ 运行 `python3 scripts/package_gpt.py --check` 检查，再运行 `python3 scripts/package_gpt.py` 打包。脚本不覆盖已有 ZIP；迭代后请更新版本或指定新的 `--out`。
+
 ## 为什么做这个插件？
 
 借鉴了 `antigravity-flow` 的 Flow 业务经验（防跳转、手动模式、点数校验、0 点数下载避坑），并将底层执行器替换为本地 **Ego Lite 浏览器**：
